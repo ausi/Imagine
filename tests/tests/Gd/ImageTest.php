@@ -193,6 +193,9 @@ class ImageTest extends AbstractImageTest
         if ($format === 'webp' && !function_exists('imagewebp')) {
             $this->markTestSkipped('GD webp support is not enabled');
         }
+        if ($format === 'jxl') {
+            $this->markTestSkipped('GD does not support ' . strtoupper($format));
+        }
 
         return parent::testSaveCompressionQuality($format, $smallSizeOptions, $bigSizeOptions);
     }

@@ -50,6 +50,16 @@ class ImagineTest extends AbstractImagineTest
     /**
      * {@inheritdoc}
      *
+     * @see \Imagine\Test\Image\AbstractImagineTest::testShouldOpenAJxlImage()
+     */
+    public function testShouldOpenAJxlImage()
+    {
+        $this->markTestSkipped('GD does not support JXL');
+    }
+
+    /**
+     * {@inheritdoc}
+     *
      * @see \Imagine\Test\Image\AbstractImagineTest::getImagine()
      */
     protected function getImagine()

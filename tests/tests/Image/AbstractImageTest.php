@@ -981,6 +981,8 @@ abstract class AbstractImageTest extends ImagineTestCase
             array('jpg', array('jpeg_quality' => 0), array('jpeg_quality' => 100)),
             array('png', array('png_compression_level' => 9), array('png_compression_level' => 0)),
             array('webp', array('webp_quality' => 0), array('webp_quality' => 100)),
+            array('jxl', array('jxl_quality' => 0), array('jxl_quality' => 100)),
+            array('jxl', array('jxl_quality' => 0), array('jxl_lossless' => true)),
         );
     }
 
